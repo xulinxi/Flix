@@ -7,7 +7,14 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     
     var movies = [[String:Any]]()
 
@@ -35,6 +42,14 @@ class MoviesViewController: UIViewController {
            }
         }
         task.resume()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
     
 
