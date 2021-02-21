@@ -29,6 +29,5 @@ Here's a demo of run the app on a real device:
 ![](https://i.imgur.com/WIwEAxg.gif)
 
 
-
 ### Notes
 Describe any challenges encountered while building the app.
