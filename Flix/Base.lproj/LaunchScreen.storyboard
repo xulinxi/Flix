@@ -16,13 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="OTX-6F-xoy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="OTX-6F-xoy">
                                 <rect key="frame" x="138" y="285" width="138" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="4td-Mu-lWL"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="139" id="7Vm-H7-T5h"/>
+                                    <constraint firstAttribute="width" constant="138" id="Sku-tj-j6k"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="139" id="cgA-nK-Q29"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="138" id="gSh-rB-YEO"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="138" id="qnt-ob-GHm"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kj-Kl-sIM">
-                                <rect key="frame" x="172" y="432" width="71" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kj-Kl-sIM">
+                                <rect key="frame" x="171.5" y="432" width="71" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="oms-WW-XYa"/>
+                                    <constraint firstAttribute="height" constant="67" id="uvl-Yq-NeI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,6 +40,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OTX-6F-xoy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="241" id="0cg-XI-0K3"/>
+                            <constraint firstItem="OTX-6F-xoy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="241" id="4Mv-IL-p6T"/>
+                            <constraint firstItem="OTX-6F-xoy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="7gq-Be-2Iq"/>
+                            <constraint firstItem="6Kj-Kl-sIM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="388" id="KE0-VB-tEv"/>
+                            <constraint firstItem="6Kj-Kl-sIM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="388" id="N2X-hy-XdW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Kj-Kl-sIM" secondAttribute="trailing" id="R2S-Nm-tiC"/>
+                            <constraint firstItem="6Kj-Kl-sIM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="388" id="aeg-fm-g8m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OTX-6F-xoy" secondAttribute="trailing" constant="138" id="c1e-4D-N5u"/>
+                            <constraint firstItem="OTX-6F-xoy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="gfo-l5-WLD"/>
+                            <constraint firstItem="6Kj-Kl-sIM" firstAttribute="centerX" secondItem="OTX-6F-xoy" secondAttribute="centerX" id="hbt-7i-mah"/>
+                            <constraint firstItem="6Kj-Kl-sIM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tgM-iL-mP1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OTX-6F-xoy" secondAttribute="trailing" constant="138" id="uyy-5B-Fg4"/>
+                            <constraint firstItem="OTX-6F-xoy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="241" id="zAc-ZD-3ij"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
