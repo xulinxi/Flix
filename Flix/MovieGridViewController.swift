@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import AlamofireImage
 
-class MovieGridViewController: UIViewController {
+class MovieGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var movies = [[String:Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
 
         let url = URL(string: "https://api.themoviedb.org/3/movie/297762/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -26,6 +33,7 @@ class MovieGridViewController: UIViewController {
             
             self.movies = dataDictionary["results"] as![[String : Any]]
             
+            self.collectionView.reloadData()
             print(self.movies)
             
             
@@ -39,7 +47,26 @@ class MovieGridViewController: UIViewController {
         task.resume()
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
+    
+        let movie = movies[indexPath.item]
+        
+        let baseUrl = "https://image.tmdb.org/t/p/w185"
+        let posterPath = movie["poster_path"] as! String
+        let posterUrl = URL(string: baseUrl +
+            posterPath)
+        
+        cell.posterView.af_setImage(withURL: posterUrl!)
+        
+        
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 
