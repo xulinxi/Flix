@@ -38,6 +38,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             
             self.movies = dataDictionary["results"] as![[String : Any]]
             
+//            print(dataDictionary)
+            
             self.tableView.reloadData()
 
               // TODO: Get the array of movies
