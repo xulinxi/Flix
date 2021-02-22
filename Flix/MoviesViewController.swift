@@ -10,7 +10,6 @@ import AlamofireImage
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -100,5 +99,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         // deselect the movie after we go back
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+//        // Find the selected movie
+//        let grid = sender as! UITableViewCell
+//        let girdindexPath = tableView.indexPath(for: grid)!
+//        let girdMovie = movies[girdindexPath.row]
+//
+//        // Pass the selected movie to the details trailer view controller
+//        let detailsTrailerViewController = segue.destination as! MovieDetailsTrailerViewController
+//        detailsTrailerViewController.movie = girdMovie
     }
 }
