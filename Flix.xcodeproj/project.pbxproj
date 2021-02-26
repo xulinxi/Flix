@@ -138,14 +138,14 @@
 				410468B725DF64B5002A30D9 /* Main.storyboard */,
 				410E80CE25E3538900AFC6E9 /* MovieGridCell.swift */,
 				41CA1E6E25DF95060079EEB3 /* MoviesViewController.swift */,
-				41CA1E7625DF9B4B0079EEB3 /* MovieCell.swift */,
-				410E80C625E344D600AFC6E9 /* MovieGridViewController.swift */,
 				410E80AB25E2F84900AFC6E9 /* MovieDetailsViewController.swift */,
+				410E80C625E344D600AFC6E9 /* MovieGridViewController.swift */,
 				41410D3625E36BAE009BE5EF /* MovieDetailsTrailerViewController.swift */,
+				41C11E6E25E8A6C400E3F5A2 /* TrailerTapViewController.swift */,
+				41CA1E7625DF9B4B0079EEB3 /* MovieCell.swift */,
 				410468BA25DF64B7002A30D9 /* Assets.xcassets */,
 				410468BC25DF64B7002A30D9 /* LaunchScreen.storyboard */,
 				410468BF25DF64B7002A30D9 /* Info.plist */,
-				41C11E6E25E8A6C400E3F5A2 /* TrailerTapViewController.swift */,
 			);
 			path = Flix;
 			sourceTree = "<group>";

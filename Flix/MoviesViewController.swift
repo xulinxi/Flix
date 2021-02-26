@@ -76,8 +76,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-
-
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -93,7 +91,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let movie = movies[indexPath.row]
         
         // Pass the selected movie to the details view controller
-        
+    
         let detailsViewController = segue.destination as! MovieDetailsViewController
         detailsViewController.movie = movie
         

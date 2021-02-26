@@ -13,23 +13,12 @@ class MovieDetailsTrailerViewController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
     
-    
-    
     @IBOutlet weak var backdropView: UIImageView!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
     var movie: [String:Any]!
-    
-   /* override func loadView() {
-            let webConfiguration = WKWebViewConfiguration()
-            webView = WKWebView(frame: .zero, configuration: webConfiguration)
-            webView.uiDelegate = self
-            view = webView
-        }*/
-
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,45 +47,18 @@ class MovieDetailsTrailerViewController: UIViewController, WKUIDelegate {
                                 backdropPath)
         
         backdropView.af_setImage(withURL: backdropUrl!)
-        
-        
-//        // trailers
-//        let myURL = URL(string:"https://www.apple.com")
-//                let myRequest = URLRequest(url: myURL!)
-//                webView.load(myRequest)
+
     }
     
-    
-
     @IBAction func didTap(_ sender: UITapGestureRecognizer) {
 
-        let location = sender.location(in: view)
-        print("poster tapped!!!")
-        
+        _ = sender.location(in: view)
+//        print("poster tapped!!!")
         performSegue(withIdentifier: "trailerSegue", sender: nil)
         
     }
 
 
-    /*@objc func didTap(sender: UITapGestureRecognizer) {
-
-       // User tapped at the point above. Do something with that if you want.
-
-       // tap gestures
-       // The didTap: method will be defined in Step 3 below.
-       let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(sender:)))
-
-       // Optionally set the number of required taps, e.g., 2 for a double click
-       tapGestureRecognizer.numberOfTapsRequired = 2
-
-       // Attach it to a view of your choice. If it's a UIImageView, remember to enable user interaction
-       posterView.isUserInteractionEnabled = true
-       posterView.addGestureRecognizer(tapGestureRecognizer)
-
-    }*/
-    
-
-    
     /*
     // MARK: - Navigation
 
@@ -106,5 +68,21 @@ class MovieDetailsTrailerViewController: UIViewController, WKUIDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        // Find the selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        // Pass the selected movie to the details view controller
+        
+        let MovieDetailsTrailerViewController = segue.destination as! MovieDetailsTrailerViewController
+        MovieDetailsTrailerViewController.movie = movie
+    }
 
 }

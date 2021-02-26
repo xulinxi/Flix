@@ -94,7 +94,10 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let MovieDetailsTrailerViewController = segue.destination as! MovieDetailsTrailerViewController
         MovieDetailsTrailerViewController.movie = movie
+        
     }
+    
+
     
 
 }
