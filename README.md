@@ -48,6 +48,8 @@ Describe any challenges encountered while building the app.
 <img src="file:///Users/xulinxi/Desktop/app%20on%20the%20phone.gif" width=250><br>
 Here's a demo of running the app on a real device:
 ![](https://i.imgur.com/WIwEAxg.gif)
+![app on the phone](https://user-images.githubusercontent.com/52603892/109373308-09c33d00-787c-11eb-81f1-5e18adb9e911.gif)
+
 
 (Note: Due to the file size, the gif of the demo of running the app on a real device might not shown up in this file.
 If so, feel free to redirect to this website and view it:
