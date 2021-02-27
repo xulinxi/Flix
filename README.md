@@ -42,7 +42,7 @@ Describe any challenges encountered while building the app.
 - [ ] (1pt) Run your app on a real device. (Features were added later; no added points)
 
 ### App Walkthrough GIF
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `http://g.recordit.co/GAQeusEz8h.gif`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
+
 <img src="http://g.recordit.co/jQSUqJETnA.gif" width=250><br>
 
 <img src="file:///Users/xulinxi/Desktop/app%20on%20the%20phone.gif" width=250><br>
